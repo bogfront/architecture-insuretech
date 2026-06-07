@@ -1,0 +1,40 @@
+"""
+GraphQL-схема сервиса управления клиентскими данными (client-info).
+Заменяет REST API, позволяя клиентам запрашивать только нужные поля.
+"""
+
+type Client {
+  id: ID!
+  name: String
+  age: Int
+  """Документы клиента (паспорт, водительское удостоверение и т.д.)"""
+  documents: [Document!]
+  """Родственники клиента (для страховок жизни и здоровья)"""
+  relatives: [Relative!]
+}
+
+type Document {
+  id: ID!
+  type: String
+  number: String
+  issueDate: String
+  expiryDate: String
+}
+
+type Relative {
+  id: ID!
+  relationType: String
+  name: String
+  age: Int
+}
+
+type Query {
+  """Получить клиента по ID. Поля documents и relatives загружаются только при явном запросе."""
+  client(id: ID!): Client
+
+  """Получить только документы клиента по его ID."""
+  clientDocuments(clientId: ID!): [Document!]
+
+  """Получить только родственников клиента по его ID."""
+  clientRelatives(clientId: ID!): [Relative!]
+}
