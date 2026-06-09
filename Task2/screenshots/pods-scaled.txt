@@ -1,0 +1,11 @@
+NAME                        READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+test-app-6dffb7ff57-5qvbn   1/1     Running   0          44m   10.244.0.5    minikube   <none>           <none>
+test-app-6dffb7ff57-89b9n   1/1     Running   0          40m   10.244.0.9    minikube   <none>           <none>
+test-app-6dffb7ff57-8cpm2   1/1     Running   0          36m   10.244.0.13   minikube   <none>           <none>
+test-app-6dffb7ff57-bnqdk   1/1     Running   0          41m   10.244.0.8    minikube   <none>           <none>
+test-app-6dffb7ff57-ffgw7   1/1     Running   0          39m   10.244.0.10   minikube   <none>           <none>
+test-app-6dffb7ff57-fptd8   1/1     Running   0          36m   10.244.0.14   minikube   <none>           <none>
+test-app-6dffb7ff57-ldqs5   1/1     Running   0          42m   10.244.0.7    minikube   <none>           <none>
+test-app-6dffb7ff57-mcr86   1/1     Running   0          38m   10.244.0.11   minikube   <none>           <none>
+test-app-6dffb7ff57-ttfcb   1/1     Running   0          37m   10.244.0.12   minikube   <none>           <none>
+test-app-6dffb7ff57-w7mrk   1/1     Running   0          43m   10.244.0.6    minikube   <none>           <none>

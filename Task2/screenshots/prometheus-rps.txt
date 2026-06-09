@@ -1,0 +1,12 @@
+=== RPS per pod (rate over 2m) ===
+  test-app-6dffb7ff57-ffgw7: 0.150 req/s
+  test-app-6dffb7ff57-mcr86: 0.150 req/s
+  test-app-6dffb7ff57-89b9n: 0.150 req/s
+  test-app-6dffb7ff57-ttfcb: 0.150 req/s
+  test-app-6dffb7ff57-bnqdk: 0.150 req/s
+  test-app-6dffb7ff57-8cpm2: 0.150 req/s
+  test-app-6dffb7ff57-5qvbn: 0.150 req/s
+  test-app-6dffb7ff57-ldqs5: 0.150 req/s
+  test-app-6dffb7ff57-w7mrk: 0.150 req/s
+  test-app-6dffb7ff57-fptd8: 0.150 req/s
+  TOTAL: 1.500 req/s across 10 pods

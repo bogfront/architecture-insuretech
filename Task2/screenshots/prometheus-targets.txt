@@ -1,0 +1,53 @@
+=== Prometheus Targets (test-app pods) ===
+
+Pod: test-app-6dffb7ff57-89b9n
+  scrapeURL: http://10.244.0.9:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:07.890046875Z
+
+Pod: test-app-6dffb7ff57-bnqdk
+  scrapeURL: http://10.244.0.8:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:46:51.198661715Z
+
+Pod: test-app-6dffb7ff57-mcr86
+  scrapeURL: http://10.244.0.11:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:33.645949846Z
+
+Pod: test-app-6dffb7ff57-5qvbn
+  scrapeURL: http://10.244.0.5:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:37.022106041Z
+
+Pod: test-app-6dffb7ff57-ffgw7
+  scrapeURL: http://10.244.0.10:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:18.622961963Z
+
+Pod: test-app-6dffb7ff57-fptd8
+  scrapeURL: http://10.244.0.14:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:42.265165544Z
+
+Pod: test-app-6dffb7ff57-ldqs5
+  scrapeURL: http://10.244.0.7:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:36.224697555Z
+
+Pod: test-app-6dffb7ff57-w7mrk
+  scrapeURL: http://10.244.0.6:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:42.385798336Z
+
+Pod: test-app-6dffb7ff57-8cpm2
+  scrapeURL: http://10.244.0.13:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:04.313774263Z
+
+Pod: test-app-6dffb7ff57-ttfcb
+  scrapeURL: http://10.244.0.12:8080/metrics
+  health: up
+  lastScrape: 2026-06-09T06:47:21.544176298Z
+
+Total test-app targets healthy: 10/10

@@ -1,0 +1,14 @@
+=== http_requests_total (Prometheus query) ===
+
+pod=test-app-6dffb7ff57-5qvbn  http_requests_total=610
+pod=test-app-6dffb7ff57-w7mrk  http_requests_total=405
+pod=test-app-6dffb7ff57-ldqs5  http_requests_total=393
+pod=test-app-6dffb7ff57-bnqdk  http_requests_total=378
+pod=test-app-6dffb7ff57-89b9n  http_requests_total=370
+pod=test-app-6dffb7ff57-ffgw7  http_requests_total=363
+pod=test-app-6dffb7ff57-mcr86  http_requests_total=357
+pod=test-app-6dffb7ff57-ttfcb  http_requests_total=348
+pod=test-app-6dffb7ff57-fptd8  http_requests_total=342
+pod=test-app-6dffb7ff57-8cpm2  http_requests_total=336
+
+TOTAL: 3902 requests across 10 pods
