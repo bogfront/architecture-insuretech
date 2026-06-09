@@ -1,0 +1,41 @@
+Name:                                                     test-app-hpa-memory
+Namespace:                                                default
+Labels:                                                   <none>
+Annotations:                                              <none>
+CreationTimestamp:                                        Tue, 09 Jun 2026 08:47:59 +0300
+Reference:                                                Deployment/test-app
+Metrics:                                                  ( current / target )
+  resource memory on pods  (as a percentage of request):  91% (14054Ki) / 80%
+Min replicas:                                             1
+Max replicas:                                             10
+Behavior:
+  Scale Up:
+    Stabilization Window: 30 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods  Value: 2  Period: 30 seconds
+  Scale Down:
+    Stabilization Window: 120 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods  Value: 1  Period: 60 seconds
+Deployment pods:    10 current / 10 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     True    ReadyForNewScale  recommended size matches current size
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from memory resource utilization (percentage of request)
+  ScalingLimited  True    TooManyReplicas   the desired replica count is more than the maximum replica count
+Events:
+  Type     Reason                        Age                 From                       Message
+  ----     ------                        ----                ----                       -------
+  Warning  FailedComputeMetricsReplicas  55m (x12 over 57m)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get memory resource metric value: failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+  Warning  FailedGetResourceMetric       47m (x41 over 57m)  horizontal-pod-autoscaler  failed to get memory utilization: unable to get metrics for resource memory: no metrics returned from resource metrics API
+  Normal   SuccessfulRescale             43m                 horizontal-pod-autoscaler  New size: 2; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             42m                 horizontal-pod-autoscaler  New size: 3; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             41m                 horizontal-pod-autoscaler  New size: 4; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             40m                 horizontal-pod-autoscaler  New size: 5; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             39m                 horizontal-pod-autoscaler  New size: 6; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             38m                 horizontal-pod-autoscaler  New size: 7; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             37m                 horizontal-pod-autoscaler  New size: 8; reason: memory resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             36m                 horizontal-pod-autoscaler  New size: 10; reason: memory resource utilization (percentage of request) above target

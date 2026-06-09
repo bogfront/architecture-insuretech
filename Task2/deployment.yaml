@@ -20,7 +20,8 @@ spec:
     spec:
       containers:
         - name: test-app
-          image: cr.yandex/crp9ftr22d26age3hulg/load-test-app:latest
+          image: test-app:local
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
           resources:

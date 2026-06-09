@@ -1,0 +1,68 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"autoscaling/v2","kind":"HorizontalPodAutoscaler","metadata":{"annotations":{},"name":"test-app-hpa-memory","namespace":"default"},"spec":{"behavior":{"scaleDown":{"policies":[{"periodSeconds":60,"type":"Pods","value":1}],"stabilizationWindowSeconds":120},"scaleUp":{"policies":[{"periodSeconds":30,"type":"Pods","value":2}],"stabilizationWindowSeconds":30}},"maxReplicas":10,"metrics":[{"resource":{"name":"memory","target":{"averageUtilization":80,"type":"Utilization"}},"type":"Resource"}],"minReplicas":1,"scaleTargetRef":{"apiVersion":"apps/v1","kind":"Deployment","name":"test-app"}}}
+  creationTimestamp: "2026-06-09T05:47:59Z"
+  name: test-app-hpa-memory
+  namespace: default
+  resourceVersion: "4005"
+  uid: ebe3a2bc-c1c6-4657-af6a-565e661e9d9f
+spec:
+  behavior:
+    scaleDown:
+      policies:
+      - periodSeconds: 60
+        type: Pods
+        value: 1
+      selectPolicy: Max
+      stabilizationWindowSeconds: 120
+    scaleUp:
+      policies:
+      - periodSeconds: 30
+        type: Pods
+        value: 2
+      selectPolicy: Max
+      stabilizationWindowSeconds: 30
+  maxReplicas: 10
+  metrics:
+  - resource:
+      name: memory
+      target:
+        averageUtilization: 80
+        type: Utilization
+    type: Resource
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: test-app
+status:
+  conditions:
+  - lastTransitionTime: "2026-06-09T05:48:14Z"
+    message: recommended size matches current size
+    reason: ReadyForNewScale
+    status: "True"
+    type: AbleToScale
+  - lastTransitionTime: "2026-06-09T06:02:32Z"
+    message: the HPA was able to successfully calculate a replica count from memory
+      resource utilization (percentage of request)
+    reason: ValidMetricFound
+    status: "True"
+    type: ScalingActive
+  - lastTransitionTime: "2026-06-09T06:10:33Z"
+    message: the desired replica count is more than the maximum replica count
+    reason: TooManyReplicas
+    status: "True"
+    type: ScalingLimited
+  currentMetrics:
+  - resource:
+      current:
+        averageUtilization: 91
+        averageValue: 14054Ki
+      name: memory
+    type: Resource
+  currentReplicas: 10
+  desiredReplicas: 10
+  lastScaleTime: "2026-06-09T06:09:33Z"
